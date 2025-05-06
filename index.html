@@ -3,195 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI/ML Engineer Portfolio - Jayraj Chaudhary</title>
-  <!-- Tailwind CSS -->
+  <title>Jayraj Chaudhary – AI/ML Engineer Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    body { font-family: 'Inter', sans-serif; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    section {
+      scroll-margin-top: 80px;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow fixed w-full z-20">
+  <nav class="bg-white border-b border-gray-200 fixed w-full z-20">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="text-2xl font-bold text-blue-600">Jayraj Chaudhary</a>
-        <div class="hidden md:flex space-x-6">
-          <a href="#about" class="hover:text-blue-500 transition">About</a>
-          <a href="#skills" class="hover:text-blue-500 transition">Skills</a>
-          <a href="#projects" class="hover:text-blue-500 transition">Projects</a>
-          <a href="https://jayrajchaudharyblog.wordpress.com/" class="hover:text-blue-500 transition">Blogs</a>
-          <a href="#contact" class="hover:text-blue-500 transition">Contact</a>
+        <a href="#" class="text-lg font-semibold text-gray-900">Jayraj Chaudhary</a>
+        <div class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="#about" class="hover:text-blue-600 transition">About</a>
+          <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+          <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+          <a href="https://jayrajchaudharyblog.wordpress.com/" class="hover:text-blue-600 transition">Blog</a>
+          <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
         </div>
         <div class="md:hidden">
-          <button id="mobile-menu-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <button id="mobile-menu-btn" aria-label="Toggle Menu">
+            <svg class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
       </div>
     </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden bg-white shadow-md">
-      <a href="#about" class="block px-4 py-2">About</a>
-      <a href="#skills" class="block px-4 py-2">Skills</a>
-      <a href="#projects" class="block px-4 py-2">Projects</a>
-      <a href="https://jayrajchaudharyblog.wordpress.com/" class="block px-4 py-2">Blog</a>
-      <a href="#contact" class="block px-4 py-2">Contact</a>
+    <div id="mobile-menu" class="hidden bg-white border-t border-gray-200 md:hidden">
+      <a href="#about" class="block px-4 py-2 text-gray-700">About</a>
+      <a href="#skills" class="block px-4 py-2 text-gray-700">Skills</a>
+      <a href="#projects" class="block px-4 py-2 text-gray-700">Projects</a>
+      <a href="https://jayrajchaudharyblog.wordpress.com/" class="block px-4 py-2 text-gray-700">Blog</a>
+      <a href="#contact" class="block px-4 py-2 text-gray-700">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <!-- <section id="home" class="pt-24 min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center px-4">
-    <h1 class="text-5xl font-extrabold mb-4">Hi, I'm [Your Name]</h1>
-    <p class="text-xl mb-6 max-w-2xl">AI/ML Engineer with expertise in TensorFlow, PyTorch, FastAPI, and LangChain, passionate about delivering scalable, explainable AI solutions that drive business value.</p>
-    <a href="#projects" class="inline-block bg-white text-indigo-600 font-semibold py-3 px-8 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">Explore My Work</a>
-  </section> -->
-
-<!-- <section id="home" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-24 px-6 text-center">
-  <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
-    I’m Jayraj Chaudhary – Not Your Average AI Engineer
-  </h1>
-  <p class="max-w-2xl mx-auto text-lg md:text-xl mb-8 leading-relaxed">
-    No, I’m not a 10-year veteran—but give me a Monday morning tutorial and I’ll have a production system by Tuesday afternoon.  
-    I learn in warp speed, code like it’s caffeine-powered, and make dusty old tools look obsolete.  
-    Your next hire? More like your secret weapon.
-  </p>
-  <a href="#projects" class="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition">
-    Show Me What I’ve Built
-  </a>
-</section> -->
-<section id="home" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-24 px-6">
-  <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10 text-center md:text-left">
-    
-    <!-- Text Section -->
-    <div class="md:w-2/3">
-      <h1 class="text-3xl md:text-4xl font-extrabold mb-4">
-        I’m Jayraj Chaudhary – Not Your Average AI Engineer
-      </h1>
-      <p class="max-w-xl text-base md:text-lg mb-8 leading-relaxed mx-auto md:mx-0 text-gray-100">
-        No, I’m not a 10-year veteran—but give me a Monday morning tutorial and I’ll have a production system by Tuesday afternoon.  
-        I learn in warp speed, code like it’s caffeine-powered, and make dusty old tools look obsolete.  
+  <!-- Hero -->
+  <section id="home" class="bg-gray-50 pt-24 pb-20 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 text-center md:text-left">
+      <div class="md:w-2/3">
+        <h1 class="text-4xl font-semibold text-gray-900 mb-4">
+          Hi, I’m Jayraj Chaudhary
+        </h1>
+        <p class="text-gray-700 text-base md:text-lg max-w-xl mb-6">
+          No, I’m not a 10-year veteran, but give me a Monday morning tutorial and I’ll have a production system by Tuesday afternoon.  
+        I learn in warp speed, code like it’s caffeine powered, and modernize outdated systems into scalable, efficient solutions.  
         Your next hire? More like your secret weapon.
-      </p>
-      <a href="#projects" class="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition">
-        Show Me What I’ve Built
-      </a>
+        </p>
+        <a href="#projects" class="inline-block border border-blue-600 text-blue-600 font-medium px-6 py-2 rounded hover:bg-blue-600 hover:text-white transition">
+          View My Work
+        </a>
+      </div>
+      <div class="md:w-1/3">
+        <img src="assets/images/user-image-1.png" alt="Jayraj Chaudhary"
+             class="w-52 h-52 object-cover rounded-full border border-gray-200 mx-auto md:mx-0">
+      </div>
     </div>
+  </section>
 
-    <!-- Image Section -->
-    <div class="md:w-1/3">
-      <img src="assets/images/user-image-1.png" alt="Jayraj Chaudhary profile" class="w-64 h-64 object-cover rounded-full shadow-2xl mx-auto md:mx-0">
-    </div>
-
-  </div>
-</section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 px-4 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center text-indigo-600">About Me</h2>
-    <p class="text-gray-700 leading-relaxed">
-      AI Engineer combining robust technical proficiency (TensorFlow, PyTorch, FastAPI, LangChain) with business acumen developed at Aston University. Passionate about deploying scalable, explainable AI solutions—demonstrated through research in mental health and data integrity—to deliver measurable business outcomes and competitive advantage.
+  <!-- About -->
+  <section id="about" class="bg-white py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-4">About Me</h2>
+      <p class="text-gray-700 leading-relaxed">
+        I’m an AI Engineer with a strong foundation in ML, NLP, and scalable backend systems, With ith business acumen developed at Aston University. I aim to create transparent and efficient machine learning pipelines that empower decision-making and innovation.
     </p>
   </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="bg-white py-20 px-4">
-    <h2 class="text-3xl font-bold text-center mb-8 text-indigo-600">Technical Skills</h2>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-      <div class="p-4 bg-gray-100 rounded-lg shadow hover:shadow-lg transition">Python</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow hover:shadow-lg transition">TensorFlow & PyTorch</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow hover:shadow-lg transition">FastAPI & RESTful APIs</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow hover:shadow-lg transition">LangChain & RAG</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow hover:shadow-lg transition">SQL & NoSQL Databases</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow hover:shadow-lg transition">Docker & Kubernetes</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow hover:shadow-lg transition">AWS & Cloud Infrastructure</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow hover:shadow-lg transition">MLOps & CI/CD</div>
+      </p>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 px-4">
-    <h2 class="text-3xl font-bold text-center mb-8 text-indigo-600">Projects</h2>
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-
-      <!-- QuerySense -->
-      <a href="projects/text-summarizer.html" class="group block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition">
-        <!-- <img src="assets/images/text-Summarizer-logo-1.png" alt="QuerySense" class="w-full h-48 object-cover" /> -->
-        <img src="assets/images/text-summarizer-logo-1.png" alt="Text-Summarizer" class="w-full h-48 object-contain" />
-
-
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2 group-hover:text-indigo-600">Text Summarizer</h3>
-          <p class="text-gray-600" style="text-align: justify;">An end-to-end, production-ready Text Summarization system powered by modern MLOps practices. This project leverages a modular architecture with configurable pipelines, version control, and seamless deployment using Docker, GitHub Actions, and AWS (EC2 + ECR).</p>
-        </div>
-      </a>
-
-      <!-- MindAssist -->
-      <a href="projects/mindassist.html" class="group block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition">
-        <img src="assets/images/mindassist.png" alt="MindAssist" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2 group-hover:text-indigo-600">MindAssist</h3>
-          <p class="text-gray-600">Mental health AI chatbot using LoRA fine-tuning on LLaMA3, deployed via FastAPI & Docker.</p>
-        </div>
-      </a>
-
-      <!-- DocuChat -->
-      <a href="projects/docuchat.html" class="group block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition">
-        <img src="assets/images/docuchat.png" alt="DocuChat" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2 group-hover:text-indigo-600">DocuChat</h3>
-          <p class="text-gray-600">RAG-based document assistant with FAISS, OpenAI embeddings & Streamlit frontend.</p>
-        </div>
-      </a>
-
-      <!-- DeepGuard -->
-      <a href="projects/deepguard.html" class="group block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition">
-        <img src="assets/images/deepguard.png" alt="DeepGuard" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2 group-hover:text-indigo-600">DeepGuard</h3>
-          <p class="text-gray-600">Explainable AI for deepfake detection using TensorFlow, SHAP, LIME & Grad-CAM.</p>
-        </div>
-      </a>
-
-      <!-- Stock Price Prediction -->
-      <a href="projects/stock-price-prediction.html" class="group block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition">
-        <img src="assets/images/stock-prediction.png" alt="Stock Price Prediction" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2 group-hover:text-indigo-600">Stock Price Prediction</h3>
-          <p class="text-gray-600">LSTM model forecasting with 90%+ accuracy and real-time dashboard.</p>
-        </div>
-      </a>
-
+  <!-- Skills -->
+  <section id="skills" class="bg-gray-100 py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-8">Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-sm">
+        <div class="border px-4 py-2 rounded bg-white">Python</div>
+        <div class="border px-4 py-2 rounded bg-white">TensorFlow / PyTorch</div>
+        <div class="border px-4 py-2 rounded bg-white">FastAPI / REST APIs</div>
+        <div class="border px-4 py-2 rounded bg-white">LangChain / RAG</div>
+        <div class="border px-4 py-2 rounded bg-white">SQL / NoSQL</div>
+        <div class="border px-4 py-2 rounded bg-white">Docker / Kubernetes</div>
+        <div class="border px-4 py-2 rounded bg-white">AWS / Cloud</div>
+        <div class="border px-4 py-2 rounded bg-white">MLOps / CI-CD</div>
+      </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="bg-indigo-600 text-white py-20 px-4">
-    <h2 class="text-3xl font-bold text-center mb-8">Contact</h2>
-    <div class="max-w-md mx-auto">
+  <!-- Projects -->
+  <section id="projects" class="bg-white py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl font-semibold text-center text-gray-900 mb-10">Projects</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Example Card -->
+        <a href="projects/text-summarizer.html" class="block border rounded p-4 hover:shadow-md transition bg-white">
+          <img src="assets/images/text-summarizer-logo-1.png" class="h-40 w-full object-contain mb-4" alt="Text Summarizer">
+          <h3 class="text-lg font-medium text-gray-800 mb-2">Text Summarizer</h3>
+          <p class="text-sm text-gray-600">End-to-end NLP system with MLOps deployment (Docker, GitHub Actions, AWS).</p>
+        </a>
+        <a href="projects/mindassist.html" class="block border rounded p-4 hover:shadow-md transition bg-white">
+          <img src="assets/images/mindassist.png" class="h-40 w-full object-cover mb-4" alt="MindAssist">
+          <h3 class="text-lg font-medium text-gray-800 mb-2">MindAssist</h3>
+          <p class="text-sm text-gray-600">Mental health chatbot fine-tuned with LoRA, served via FastAPI + Docker.</p>
+        </a>
+        <a href="projects/docuchat.html" class="block border rounded p-4 hover:shadow-md transition bg-white">
+          <img src="assets/images/docuchat.png" class="h-40 w-full object-cover mb-4" alt="DocuChat">
+          <h3 class="text-lg font-medium text-gray-800 mb-2">DocuChat</h3>
+          <p class="text-sm text-gray-600">RAG-based document assistant with FAISS & OpenAI embeddings.</p>
+        </a>
+        <a href="projects/deepguard.html" class="block border rounded p-4 hover:shadow-md transition bg-white">
+          <img src="assets/images/deepguard.png" class="h-40 w-full object-cover mb-4" alt="DeepGuard">
+          <h3 class="text-lg font-medium text-gray-800 mb-2">DeepGuard</h3>
+          <p class="text-sm text-gray-600">Explainable deepfake detection using SHAP, Grad-CAM & LIME.</p>
+        </a>
+        <a href="projects/stock-price-prediction.html" class="block border rounded p-4 hover:shadow-md transition bg-white">
+          <img src="assets/images/stock-prediction.png" class="h-40 w-full object-cover mb-4" alt="Stock Predictor">
+          <h3 class="text-lg font-medium text-gray-800 mb-2">Stock Price Prediction</h3>
+          <p class="text-sm text-gray-600">LSTM-based forecasting with 90%+ accuracy and live dashboard.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-50 py-20 px-6">
+    <div class="max-w-md mx-auto text-center">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-6">Contact Me</h2>
       <form action="mailto:youremail@example.com" method="post" class="flex flex-col space-y-4">
-        <input type="text" name="name" placeholder="Your Name" class="p-3 rounded" required>
-        <input type="email" name="email" placeholder="Your Email" class="p-3 rounded" required>
-        <textarea name="message" rows="5" placeholder="Your Message" class="p-3 rounded" required></textarea>
-        <button type="submit" class="bg-white text-indigo-600 font-semibold py-3 rounded-lg shadow hover:shadow-lg transition">Send Message</button>
+        <input type="text" name="name" placeholder="Your Name" class="border px-4 py-2 rounded" required>
+        <input type="email" name="email" placeholder="Your Email" class="border px-4 py-2 rounded" required>
+        <textarea name="message" rows="4" placeholder="Your Message" class="border px-4 py-2 rounded" required></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          Send Message
+        </button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white py-6 text-center text-gray-600">
-    <p>© 2025 Jayraj Chaudhary. Built with ❤ and AI.</p>
+  <footer class="bg-white border-t border-gray-200 text-center text-sm py-6 text-gray-500">
+    © 2025 Jayraj Chaudhary — Built with focus, coffee, and code.
   </footer>
 
-  <!-- Scripts -->
+  <!-- JS for Mobile Menu -->
   <script>
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
   </script>
 </body>
 </html>
