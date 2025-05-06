@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natural Langauge to SQL Query – AI/ML Engineer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    section { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-blue-600 font-medium text-sm hover:underline">← Back to Home</a>
+      <span class="text-lg font-semibold text-gray-900">Project: Natural Langauge to SQL Query Generator</span>
+    </div>
+  </nav>
+
+  <section class="relative text-center py-32 px-6 bg-gray-100 overflow-hidden">
+    <!-- Light background image -->
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/text-summarizer-banner.png"
+           alt="Text Summarizer Background"
+           class="w-full h-full object-cover object-center opacity-70" />
+    </div>
+  
+    <!-- Softer overlay -->
+    <div class="absolute inset-0 bg-white/60 backdrop-blur-sm z-10"></div>
+  
+    <!-- Foreground content -->
+    <div class="relative z-20 max-w-3xl mx-auto">
+      <h1 class="text-4xl font-semibold mb-4 text-gray-900">Natural Lnaguage to SQL query generator</h1>
+      <p class="text-base md:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+        A locally hosted Natural Language to SQL Query Generator that enables non-technical users to query internal databases securely using plain English. Built with CodeLlama and advanced NLP techniques, it streamlines data access and reduces reliance on technical teams.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-20 space-y-20">
+
+    <!-- Overview -->
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Overview</h2>
+      <p class="text-gray-700 leading-relaxed">
+        This project is an AI-powered <strong>Natural Language to SQL Query Generator</strong> designed for a company where non-technical teams, such as marketing and growth, struggled to retrieve data from internal databases. These teams often relied on technical analysts to write SQL queries, causing delays and bottlenecks in decision-making.
+
+        The tool allows any team member—regardless of technical background—to interact with the database simply by asking questions in plain English. It then generates accurate and executable SQL queries automatically. This significantly reduces the time and dependency involved in data access, empowering non-technical users and freeing up analysts for more strategic work.
+        
+        The project is still under development and being designed to run locally and securely, without exposing internal company databases to external cloud-based AI services.
+      </p>
+    </section>
+
+    <!-- My Role -->
+    <section class="bg-gray-50 p-6 rounded-lg">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">My Role & Contributions</h2>
+      <p class="text-gray-700 leading-relaxed">
+        This project was initiated based on a real-world problem shared by a friend working in a marketing team in India. I took complete ownership of the project, from ideation to implementation. My responsibilities included:
+      </p>
+      <ul class="list-disc pl-6 space-y-3 text-gray-700">
+        <li>Understanding the business problem and user pain points</li>
+        <li>Architecting the system to work entirely offline/local for data privacy.</li>
+        <li>Developing backend APIs to support schema extraction and SQL generation.</li>
+        <li>Designing the full NLP pipeline and AI agent workflow.</li>
+        <li>Integrating local language models with search and reasoning components.</li>
+      </ul>
+    </section>
+
+    <!-- Tech Stack -->
+    <section >
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Tech Stack</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Python</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">FastAPI</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">LangGraph</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">LangChain</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">CodeLlama 7B</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Cosine Similarity </span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">BM25 </span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Ollama</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Streamlit</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Docker</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">AWS EC2</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">LangChain SQLDatabase Agent </span>
+      </div>
+    </section>
+
+    <!-- Implementation -->
+    <section class="bg-gray-50 p-6 rounded-lg">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Implementation Details</h2>
+      <ul class="list-disc pl-6 space-y-4 text-gray-700">
+        <li><strong>Schema Extraction:</strong> An API is used to connect to the company’s internal database and extract the schema. It stores the structure in a simple &lt;TableName&gt;.&lt;ColumnName&gt; format in a YAML file. This helps in understanding what data is available without exposing sensitive details..</li>
+        <li><strong>Query Analysis with NLP</strong> When a user types a query in natural language (e.g., "Show me the number of users who signed up last week"), the system tokenizes the input and uses an AI model to identify the key columns needed to build a SQL query.</li>
+        <li><strong>Relevant Column Search:</strong> Using a hybrid search approach, the system matches user intent with relevant columns from the YAML schema file:
+            <ul class="list-disc pl-6 space-y-3 text-gray-700">
+            <li>BM25 is used for exact text match.</li>
+            
+            <li>Cosine similarity handles semantic matching for more context-aware results.</li>
+        </ul>
+        <li><strong>SQL Query Generation:</strong> The AI model (CodeLlama 7B) uses the identified columns and natural language prompt to generate an initial SQL query.</li>
+
+        <li><strong>Query Execution via LangGraph:</strong> An agentic workflow is created using LangGraph which:
+            <ul class="list-disc pl-6 space-y-3 text-gray-700">
+            <li>Tries to execute the generated SQL query using LangChain’s SQLDatabase agent.</li>
+            
+            <li>If the query fails (e.g., syntax or column mismatch), the error is analyzed, and a revised query is generated automatically.</li>
+        </ul>
+        <li><strong>Results and Feedback Loop:</strong> If the execution succeeds, the results are returned to the user. If not, the process loops intelligently until a working query is created or it provides a helpful error message.</li>
+      </ul>
+      <div class="grid gap-6 mt-8">
+        <img src="../assets/images/natural-langauge-to-sql-1.png" alt="Swagger UI 1" class="rounded shadow-md w-full">
+        <img src="../assets/images/natural-langauge-to-sql-2.png" alt="Swagger UI 2" class="rounded shadow-md w-full">
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Results & Impact</h2>
+      <p class="text-gray-700 leading-relaxed">
+        While the project is still under development, early testing shows promising results:
+      </p>
+
+      <ul class="list-disc pl-6 space-y-3 text-gray-700">
+        <li>Traditional query generation (via analysts) could take 10–15 minutes. This system reduces it to under 3 minutes on average.</li>
+        <li>Inspired by Uber’s QueryGPT (which showed 18% daily ops productivity gain), this system aims to bring a similar, if not higher, efficiency boost to teams.</li>
+        <li>Now, non-technical users can explore and analyze data independently without technical bottlenecks.</li>
+        <li>y using Ollama to run models like CodeLlama locally, companies can keep their sensitive data in-house, solving a major concern with commercial AI tools.</li>
+      </ul>
+    </section>
+
+    <!-- CTA -->
+    <section class="text-center">
+      <a href="https://github.com/jayraj1906/natural_language_to_sql_query" target="_blank"
+         class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded hover:bg-blue-700 transition">
+        View on GitHub
+      </a>
+      <button id="live-demo-btn"
+         class="inline-block bg-gray-100 text-gray-800 font-medium px-6 py-3 rounded hover:bg-gray-200 transition ml-4">
+        Live Demo
+      </button>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="demo-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg max-w-lg mx-4 p-6 text-center">
+      <h3 class="text-2xl font-bold mb-4 text-blue-600">Live Demo? Not Today!</h3>
+      <p class="text-gray-700 mb-6">
+        You clicked Live Demo expecting magic but my servers are on vacation (and so is my bank account). 😅 No 24/7 demo here, it costs more than my coffee budget!<br><br>
+        Check out the screenshots above. Want the real thing? Drop me a line and I’ll fire it up just for you, briefly, but brilliantly.
+      </p>
+      <button id="close-modal-btn"
+              class="mt-2 bg-blue-600 text-white font-medium px-4 py-2 rounded hover:bg-blue-700 transition">
+        Got It
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 text-center text-sm py-6 text-gray-500">
+    © 2025 Jayraj Chaudhary
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const demoBtn = document.getElementById('live-demo-btn');
+    const modal = document.getElementById('demo-modal');
+    const closeBtn = document.getElementById('close-modal-btn');
+
+    demoBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    });
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+  </script>
+</body>
+</html>
