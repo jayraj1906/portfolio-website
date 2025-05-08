@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Langgraph Rag Agentic App – AI/ML Engineer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    section { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-blue-600 font-medium text-sm hover:underline">← Back to Home</a>
+      <span class="text-lg font-semibold text-gray-900">Project: Langgraph Rag Agentic App</span>
+    </div>
+  </nav>
+
+  <section class="relative text-center py-32 px-6 bg-gray-100 overflow-hidden">
+    <!-- Light background image -->
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/text-summarizer-banner.png"
+           alt="Text Summarizer Background"
+           class="w-full h-full object-cover object-center opacity-70" />
+    </div>
+  
+    <!-- Softer overlay -->
+    <div class="absolute inset-0 bg-white/60 backdrop-blur-sm z-10"></div>
+  
+    <!-- Foreground content -->
+    <div class="relative z-20 max-w-3xl mx-auto">
+      <h1 class="text-4xl font-semibold mb-4 text-gray-900">Langgraph Rag Agentic App</h1>
+      <p class="text-base md:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+        This is a LangChain + LangGraph + FastAPI-based RAG (Retrieval-Augmented Generation) app that lets you upload a set of URLs, stores their content into a vector database (Astra DB), and intelligently answers questions by choosing between searching Wikipedia or your uploaded content.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-20 space-y-20">
+
+    <!-- Overview -->
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Overview</h2>
+      <p class="text-gray-700 leading-relaxed">
+        I built a production-ready LangGraph app that allows users to upload URLs, extract and embed their content, and dynamically answer questions using either a vector database or Wikipedia. The system intelligently routes queries using an LLM and serves the entire workflow via a FastAPI backend, fully containerized for deployment.
+      </p>
+    </section>
+
+    <!-- My Role -->
+    <section class="bg-gray-50 p-6 rounded-lg">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">My Role & Contributions</h2>
+
+      <ul class="list-disc pl-6 space-y-3 text-gray-700">
+        <li>Designed and developed the entire backend architecture using Python.</li>
+        <li>Implemented a modular LangGraph workflow with class-based components.</li>
+        <li>Integrated Groq’s Gemma2 LLM for fast and cost-efficient inference.</li>
+        <li>Connected the app to Astra Vector DB for document retrieval.</li>
+        <li>Built RESTful APIs using FastAPI and managed app lifecycle with app.state.</li>
+        <li>Containerized the solution using Docker and created environment management with uv.</li>
+      </ul>
+    </section>
+
+    <!-- Tech Stack -->
+    <section >
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Tech Stack</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Python</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">FastAPI</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">LangGraph</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">LangChain</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Groq</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Astra DB:</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">UV </span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">WikiPedia API</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Docker</span>
+      </div>
+    </section>
+
+    <!-- Implementation -->
+    <section class="bg-gray-50 p-6 rounded-lg">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Implementation Details</h2>
+      <ul class="list-disc pl-6 space-y-4 text-gray-700">
+    
+        <li>Built a deployable, end-to-end RAG application without relying on LangGraph Cloud.</li>
+        <li>Achieved faster inference and lower latency using Groq’s Gemma2 model.</li>
+        <li>Enabled scalable document ingestion and intelligent query handling.</li>
+        <li>Improved code maintainability and testability by using class-based design and folder structure.</li>
+        <li>Made the project cloud-ready with Docker and environment isolation via .env and .dockerignore.</li>
+        
+        
+        </ul>
+        <li><strong>Results and Feedback Loop:</strong> If the execution succeeds, the results are returned to the user. If not, the process loops intelligently until a working query is created or it provides a helpful error message.</li>
+      </ul>
+      <div class="grid gap-6 mt-8">
+        <img src="../assets/images/langgraph-rag-agent-ss.png" alt="Swagger UI 1" class="rounded shadow-md w-full">
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="text-center">
+      <a href="https://github.com/jayraj1906/langgraph-rag-app" target="_blank"
+         class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded hover:bg-blue-700 transition">
+        View on GitHub
+      </a>
+      <button id="live-demo-btn"
+         class="inline-block bg-gray-100 text-gray-800 font-medium px-6 py-3 rounded hover:bg-gray-200 transition ml-4">
+        Live Demo
+      </button>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="demo-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg max-w-lg mx-4 p-6 text-center">
+      <h3 class="text-2xl font-bold mb-4 text-blue-600">Live Demo? Not Today!</h3>
+      <p class="text-gray-700 mb-6">
+        You clicked Live Demo expecting magic but my servers are on vacation (and so is my bank account). 😅 No 24/7 demo here, it costs more than my coffee budget!<br><br>
+        Check out the screenshots above. Want the real thing? Drop me a line and I’ll fire it up just for you, briefly, but brilliantly.
+      </p>
+      <button id="close-modal-btn"
+              class="mt-2 bg-blue-600 text-white font-medium px-4 py-2 rounded hover:bg-blue-700 transition">
+        Got It
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 text-center text-sm py-6 text-gray-500">
+    © 2025 Jayraj Chaudhary
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const demoBtn = document.getElementById('live-demo-btn');
+    const modal = document.getElementById('demo-modal');
+    const closeBtn = document.getElementById('close-modal-btn');
+
+    demoBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    });
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+  </script>
+</body>
+</html>
