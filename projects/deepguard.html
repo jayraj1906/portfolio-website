@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deep guard – AI/ML Engineer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    section { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-blue-600 font-medium text-sm hover:underline">← Back to Home</a>
+      <span class="text-lg font-semibold text-gray-900">Project: Deep Guard</span>
+    </div>
+  </nav>
+
+  <!-- Hero Section
+  <section class="bg-gray-50 text-center py-16 px-6">
+    <h1 class="text-4xl font-semibold mb-4 text-gray-900">Text Summarizer</h1>
+    <p class="max-w-2xl mx-auto text-base md:text-lg text-gray-700 leading-relaxed">
+      An end-to-end, production-ready <strong>Text Summarization</strong> system using PEGASUS, MLOps, and a modern deployment stack including Docker, GitHub Actions, and AWS EC2.
+    </p>
+  </section> -->
+  <section class="relative text-center py-32 px-6 bg-gray-100 overflow-hidden">
+    <!-- Light background image -->
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/text-summarizer-banner.png"
+           alt="Text Summarizer Background"
+           class="w-full h-full object-cover object-center opacity-70" />
+    </div>
+  
+    <!-- Softer overlay -->
+    <div class="absolute inset-0 bg-white/60 backdrop-blur-sm z-10"></div>
+  
+    <!-- Foreground content -->
+    <div class="relative z-20 max-w-3xl mx-auto">
+      <h1 class="text-4xl font-semibold mb-4 text-gray-900">Deep guard</h1>
+      <p class="text-base md:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+        One-click deepfake check with explainable AI
+    </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-20 space-y-20">
+
+    <!-- Overview -->
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Overview</h2>
+      <p class="text-gray-700 leading-relaxed">
+        I built a tool that tells whether a picture is real or AI-generated and shows why the model thinks so. It trains ten image-classification models on the 20 000-image CIFAKE dataset and wraps the best ones in a Streamlit web app with visual heat-maps. The goal is to help newsrooms, social platforms and anyone online spot deepfakes quickly.
+    </p>
+    </section>
+
+    <!-- My Role -->
+    <section class="bg-gray-50 p-6 rounded-lg">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">My Role & Contributions</h2>
+      <ul class="list-disc pl-6 space-y-3 text-gray-700">
+
+        <li>Collected, cleaned and split the CIFAKE dataset.</li>
+        <li>Designed and trained 6 custom CNNs plus 4 transfer-learning models.</li>
+        <li>Reached 96 % accuracy on unseen images with Models 5 & 6.</li>
+        <li>Added LIME, SHAP and Grad-CAM so users can see which pixels mattered.</li>
+        <li>Coded the Streamlit dashboard, allowing image upload, model switch and heat-map download.</li>
+        <li>Drafted a SaaS business plan (“Check for AI” button + freemium API).</li>
+        <li>Documented everything and wrote the dissertation.</li>
+      </ul>
+    </section>
+
+    <!-- Tech Stack -->
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Tech Stack</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Python</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">OpenCv</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Tensorflow</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">SHAP</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">LIME</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">GRADCAM</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Streamlit</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Matplotlib</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">scikit-learn</span>
+      </div>
+    </section>
+
+    <!-- Implementation -->
+    <section class="bg-gray-50 p-6 rounded-lg">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Implementation Details</h2>
+      <ul class="list-disc pl-6 space-y-4 text-gray-700">
+        <li><strong>Data prep:</strong> resize to 32×32 px, normalise 0-1, 80/20 train-val split; labels 0 (real) / 1 (fake).</li>
+        <li><strong>Models:</strong>6 custom CNNs (progressively deeper, dropout & batch-norm). ResNet50, VGG16, MobileNetV2, EfficientNetB0 fine-tuned.</li>
+        <li><strong>Training:</strong> Adam, binary-cross-entropy, early stopping; metrics logged for each run. </li>
+        <li><strong>Explainability:</strong> one-click LIME, SHAP and Grad-CAM visuals served in the UI. </li>
+        <li><strong>Frontend:</strong> Streamlit; shows accuracy/loss plots, prediction with confidence, and downloadable heat-maps.</li>
+        <li><strong>Business layer:</strong> pricing tiers ($0, $5, $20) and “Check for AI” plug-in for social media.</li>
+      </ul>
+      <div class="grid gap-6 mt-8">
+        <img src="../assets/images/deepguard-2.png" alt="Swagger UI 1" class="rounded shadow-md w-full">
+        <img src="../assets/images/deepguard-1.png" alt="Swagger UI 1" class="rounded shadow-md w-full">
+        <img src="../assets/images/deepguard-3.png" alt="Swagger UI 1" class="rounded shadow-md w-full">
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Results & Impact</h2>
+      <ul class="list-disc pl-6 space-y-3 text-gray-700">
+        <li>96 % balanced accuracy on test data; precision/recall 95-97 %. </li>
+        <li>End-to-end demo lets recruiters verify any image in under 5 seconds.</li>
+        <li>Dashboard explanations improve user trust and model transparency.</li>
+        <li>Business concept shows commercial viability and product thinking.</li>
+        <li>Project sharpened my skills in deep learning, XAI, full-stack Python and product strategy, preparing me to deliver production-ready ML features</li>
+      </ul>
+    </section>
+
+    <!-- CTA -->
+    <section class="text-center">
+      <a href="https://github.com/jayraj1906/deep-fake-project.git" target="_blank"
+         class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded hover:bg-blue-700 transition">
+        View on GitHub
+      </a>
+      <button id="live-demo-btn"
+         class="inline-block bg-gray-100 text-gray-800 font-medium px-6 py-3 rounded hover:bg-gray-200 transition ml-4">
+        Live Demo
+      </button>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="demo-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg max-w-lg mx-4 p-6 text-center">
+      <h3 class="text-2xl font-bold mb-4 text-blue-600">Live Demo? Not Today!</h3>
+      <p class="text-gray-700 mb-6">
+        You clicked Live Demo expecting magic but my servers are on vacation (and so is my bank account). 😅 No 24/7 demo here, it costs more than my coffee budget!<br><br>
+        Check out the screenshots above. Want the real thing? Drop me a line and I’ll fire it up just for you, briefly, but brilliantly.
+      </p>
+      <button id="close-modal-btn"
+              class="mt-2 bg-blue-600 text-white font-medium px-4 py-2 rounded hover:bg-blue-700 transition">
+        Got It
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 text-center text-sm py-6 text-gray-500">
+    © 2025 Jayraj Chaudhary
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const demoBtn = document.getElementById('live-demo-btn');
+    const modal = document.getElementById('demo-modal');
+    const closeBtn = document.getElementById('close-modal-btn');
+
+    demoBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    });
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+  </script>
+</body>
+</html>
