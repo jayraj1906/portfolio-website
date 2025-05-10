@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vehicle Insurance – AI/ML Engineer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    section { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-blue-600 font-medium text-sm hover:underline">← Back to Home</a>
+      <span class="text-lg font-semibold text-gray-900">Project: Vehicle Insurance</span>
+    </div>
+  </nav>
+
+  <!-- Hero Section
+  <section class="bg-gray-50 text-center py-16 px-6">
+    <h1 class="text-4xl font-semibold mb-4 text-gray-900">Text Summarizer</h1>
+    <p class="max-w-2xl mx-auto text-base md:text-lg text-gray-700 leading-relaxed">
+      An end-to-end, production-ready <strong>Text Summarization</strong> system using PEGASUS, MLOps, and a modern deployment stack including Docker, GitHub Actions, and AWS EC2.
+    </p>
+  </section> -->
+  <section class="relative text-center py-32 px-6 bg-gray-100 overflow-hidden">
+    <!-- Light background image -->
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/text-summarizer-banner.png"
+           alt="Text Summarizer Background"
+           class="w-full h-full object-cover object-center opacity-70" />
+    </div>
+  
+    <!-- Softer overlay -->
+    <div class="absolute inset-0 bg-white/60 backdrop-blur-sm z-10"></div>
+  
+    <!-- Foreground content -->
+    <div class="relative z-20 max-w-3xl mx-auto">
+      <h1 class="text-4xl font-semibold mb-4 text-gray-900">Vehicle Insurance</h1>
+      <p class="text-base md:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+        End-to-End MLOps Pipeline for Vehicle Insurance Prediction
+    </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-20 space-y-20">
+
+    <!-- Overview -->
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Overview</h2>
+      <p class="text-gray-700 leading-relaxed">
+        This project demonstrates a full machine learning operations (MLOps) pipeline that handles vehicle insurance data from data ingestion to model deployment. The goal is to build a scalable, automated system that can manage real-world ML workflows using modern tools and cloud services. It integrates data processing, model training, validation, and CI/CD to simulate a real production environment.
+    </p>
+    </section>
+
+    <!-- My Role -->
+    <section class="bg-gray-50 p-6 rounded-lg">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">My Role & Contributions</h2>
+      <ul class="list-disc pl-6 space-y-3 text-gray-700">
+        <li>Designed and implemented the complete MLOps workflow.</li>
+        <li>Built data ingestion, validation, and transformation modules using Python.</li>
+        <li>Trained a machine learning model and deployed it using Docker and AWS EC2.</li>
+        <li>Set up MongoDB for data storage and AWS S3 for model versioning.</li>
+        <li>Automated deployment using GitHub Actions and Docker containers.</li>
+        <li>Developed a Fastapi-based API for predictions and created a minimal web UI.</li>
+      </ul>
+    </section>
+
+    <!-- Tech Stack -->
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Tech Stack</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Python</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Pandas</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">FastAPI</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Scikit-learn</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">MongoDB </span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">AWS</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Docker</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Matplotlib</span>
+        <span class="bg-gray-100 px-4 py-1 rounded-full text-sm">Docker</span>
+      </div>
+    </section>
+
+    <!-- Implementation -->
+    <section class="bg-gray-50 p-6 rounded-lg">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Implementation Details</h2>
+      <ul class="list-disc pl-6 space-y-4 text-gray-700">
+        <li><strong>Project Initialization:</strong> Started with a modular folder structure using a custom template script.</li>
+        <li><strong>Data Ingestion:</strong> Pulled structured data from MongoDB using secure connection functions.</li>
+        <li><strong>Data Processing:</strong> Validated input using a schema file and transformed it for model readiness.</li>
+        <li><strong>Model Development:</strong> Trained models using custom estimators and encapsulated logic for reusability.</li>
+        <li><strong>Deployment:</strong> Packaged the entire pipeline into a Docker container, deployed it on an EC2 instance, and automated updates using GitHub Actions.</li>
+        <li><strong>User Interface:</strong> Built a simple frontend with Flask, HTML templates, and static files for predictions.</li>
+      </ul>
+      <div class="grid gap-6 mt-8">
+        <img src="../assets/images/vehicle-insurance-1.png" alt="Swagger UI 1" class="rounded shadow-md w-full">
+        <img src="../assets/images/vehicle-insurance-2.png" alt="Swagger UI 1" class="rounded shadow-md w-full">
+        <img src="../assets/images/vehicle-insurance-3.png" alt="Swagger UI 1" class="rounded shadow-md w-full">
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Results & Impact</h2>
+      <ul class="list-disc pl-6 space-y-3 text-gray-700">
+        <li>Successfully simulated an end-to-end production-grade ML pipeline.</li>
+        <li>Gained hands-on experience with MLOps tools, cloud platforms, and automation best practices.</li>
+        <li>Improved understanding of model versioning, reproducibility, and deployment workflows.</li>
+        <li>The project serves as a comprehensive showcase of my ability to build scalable ML systems, making it a key highlight of my portfolio for recruiters and employers.</li>
+      </ul>
+    </section>
+
+    <!-- CTA -->
+    <section class="text-center">
+      <a href="https://github.com/jayraj1906/vehicle-insurance-prediction" target="_blank"
+         class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded hover:bg-blue-700 transition">
+        View on GitHub
+      </a>
+      <button id="live-demo-btn"
+         class="inline-block bg-gray-100 text-gray-800 font-medium px-6 py-3 rounded hover:bg-gray-200 transition ml-4">
+        Live Demo
+      </button>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="demo-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg max-w-lg mx-4 p-6 text-center">
+      <h3 class="text-2xl font-bold mb-4 text-blue-600">Live Demo? Not Today!</h3>
+      <p class="text-gray-700 mb-6">
+        You clicked Live Demo expecting magic but my servers are on vacation (and so is my bank account). 😅 No 24/7 demo here, it costs more than my coffee budget!<br><br>
+        Check out the screenshots above. Want the real thing? Drop me a line and I’ll fire it up just for you, briefly, but brilliantly.
+      </p>
+      <button id="close-modal-btn"
+              class="mt-2 bg-blue-600 text-white font-medium px-4 py-2 rounded hover:bg-blue-700 transition">
+        Got It
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 text-center text-sm py-6 text-gray-500">
+    © 2025 Jayraj Chaudhary
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const demoBtn = document.getElementById('live-demo-btn');
+    const modal = document.getElementById('demo-modal');
+    const closeBtn = document.getElementById('close-modal-btn');
+
+    demoBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    });
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+  </script>
+</body>
+</html>
